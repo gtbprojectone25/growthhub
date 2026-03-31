@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-950 text-neutral-100 antialiased;
+  }
+
+  /* Scrollbar global (discreta, premium, compatível com Firefox + WebKit) */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(253 230 138 / 0.8) #0a0a0a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(253 230 138 / 0.8);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(254 243 199);
+  }
+
+  ::selection {
+    background: rgba(200, 164, 93, 0.25);
+  }
+}
+
+@layer utilities {
+  .gh-container {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+
+  .gh-section {
+    @apply py-20 sm:py-24;
+  }
+
+  .gh-fade-up {
+    animation: gh-fade-up 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .gh-hairline {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.12),
+      transparent
+    );
+  }
+
+  .gh-surface {
+    background:
+      radial-gradient(700px 500px at 15% 10%, rgba(200, 164, 93, 0.10), transparent 55%),
+      radial-gradient(900px 600px at 85% 0%, rgba(148, 163, 184, 0.10), transparent 55%),
+      radial-gradient(900px 700px at 50% 110%, rgba(37, 99, 235, 0.08), transparent 60%),
+      linear-gradient(180deg, rgba(10, 10, 10, 0.0), rgba(10, 10, 10, 1));
+  }
+}
+
+@keyframes gh-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
