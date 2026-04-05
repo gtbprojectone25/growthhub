@@ -51,6 +51,8 @@ Build a partir de **`growthhub/`**: comando `npm run build`, saída `dist`.
 
 Use a **raiz do repositório** (onde está o `package.json` de deploy). Nixpacks passa a detectar **Node**; build e start usam os scripts da raiz. Porta interna sugerida: **3000** (ou defina `PORT`).
 
+O `postinstall` usa `npm install --prefix growthhub --include=dev` para (1) tolerar pequenas diferenças no `package-lock.json` entre ambientes e (2) garantir **devDependencies** (Vite/Tailwind) mesmo quando o build roda com `NODE_ENV=production`.
+
 ### Coolify (Dockerfile)
 
 Alternativa: build pack **Dockerfile** na raiz (multi-stage com `serve` na porta `3000`).

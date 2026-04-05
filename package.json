@@ -7,7 +7,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "postinstall": "npm ci --prefix growthhub",
+    "postinstall": "npm install --prefix growthhub --no-audit --no-fund --include=dev",
     "build": "npm run build --prefix growthhub",
     "start": "npx --yes serve growthhub/dist -s -l tcp://0.0.0.0:${PORT:-3000}"
   }
