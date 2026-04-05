@@ -33,7 +33,6 @@ export default function Footer() {
             <div className="lg:col-span-5 lg:flex lg:items-end lg:justify-end">
               <div className="flex flex-wrap gap-3">
                 <SocialButton>Instagram</SocialButton>
-                <SocialButton>LinkedIn</SocialButton>
               </div>
             </div>
           </div>
