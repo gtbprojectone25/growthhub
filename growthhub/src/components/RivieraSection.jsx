@@ -20,7 +20,7 @@ export default function RivieraSection() {
 
             <div className="flex items-center gap-3">
               <a
-                href="https://landing-page-riviera.vercel.app/"
+                href="https://rivieramovies.com/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-amber-200/10 px-6 py-3 text-sm font-semibold text-amber-100 ring-1 ring-amber-200/25 transition hover:bg-amber-200/14 hover:ring-amber-200/35 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-200/35"
