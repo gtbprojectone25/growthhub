@@ -1,6 +1,8 @@
 # Growth Hub — Landing Page (React + Vite + Tailwind)
 
-Landing page institucional **simples, elegante e premium** para a marca **Growth Hub**, comunicando a Growth Hub como empresa por trás do projeto **Riviera**.
+Landing page institucional **simples, elegante e premium** para a marca **Growth Hub**, posicionando a Growth Hub como empresa por trás do projeto **Riviera**.
+
+O código da aplicação fica na pasta **`growthhub/`**. Na **raiz do repositório** existe um `package.json` extra usado só para **Coolify / Nixpacks** detectarem Node e rodarem `postinstall` → `build` → servir o `dist`.
 
 ## Stack
 
@@ -10,6 +12,7 @@ Landing page institucional **simples, elegante e premium** para a marca **Growth
 ## Rodar localmente
 
 ```bash
+cd growthhub
 npm install
 npm run dev
 ```
@@ -19,39 +22,35 @@ Abra o endereço mostrado no terminal (geralmente `http://localhost:5173`).
 ## Build (produção)
 
 ```bash
+cd growthhub
 npm run build
 npm run preview
 ```
 
-O build sai em `dist/` (pronto para deploy estático).
+O build sai em `growthhub/dist/` (deploy estático).
 
-## Estrutura da página (seções)
+## Estrutura (seções)
 
-A página é **single-page** e está organizada em componentes:
+Single-page, componentes em `growthhub/src/components/`:
 
-- `src/components/Navbar.jsx`
-- `src/components/HeroSection.jsx`
-- `src/components/AboutSection.jsx`
-- `src/components/ServicesSection.jsx`
-- `src/components/RivieraSection.jsx`
-- `src/components/Footer.jsx`
+- `Navbar.jsx`, `HeroSection.jsx`, `AboutSection.jsx`, `ServicesSection.jsx`, `RivieraSection.jsx`, `Footer.jsx`
+- Montagem em `growthhub/src/App.jsx`
 
-O “assembler” está em `src/App.jsx`.
+## Estilo
 
-## Estilo (premium dark)
+- `growthhub/src/index.css` (tema escuro, scrollbar, utilitários `gh-*`)
+- Favicon: `growthhub/public/favicon.svg`
 
-- Base e utilitários: `src/index.css`
-  - tema escuro, `scroll-behavior: smooth`
-  - utilitários do projeto (ex.: `gh-container`, `gh-section`, `gh-surface`)
-- Ícone da aba (favicon): `public/favicon.svg` (letra **G**)
+## Deploy
 
-## Conteúdo
+### Vercel / estático
 
-Os textos principais foram inseridos **exatamente** como fornecidos, e os CTAs fazem scroll/links conforme a navegação.
+Build a partir de **`growthhub/`**: comando `npm run build`, saída `dist`.
 
-## Deploy rápido
+### Coolify (Nixpacks)
 
-Qualquer plataforma de deploy estático funciona (Vercel/Netlify/GitHub Pages), usando:
+Use a **raiz do repositório** (onde está o `package.json` de deploy). Nixpacks passa a detectar **Node**; build e start usam os scripts da raiz. Porta interna sugerida: **3000** (ou defina `PORT`).
 
-- **Build command**: `npm run build`
-- **Output directory**: `dist`
+### Coolify (Dockerfile)
+
+Alternativa: build pack **Dockerfile** na raiz (multi-stage com `serve` na porta `3000`).
