@@ -44,7 +44,7 @@ export default function Navbar() {
               aria-label="Voltar ao topo"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-riviera-blue shadow-[0_0_0_6px_rgba(91,120,255,0.14)]" />
-              Growth Hub
+              Riviera Movies
             </a>
 
             <nav className="hidden items-center gap-1 md:flex" aria-label="Navegacao">

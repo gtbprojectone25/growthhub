@@ -34,14 +34,19 @@ export function FeatureCard({ index, title, description }) {
   )
 }
 
-export function Metric({ value, label, tone = 'default' }) {
+export function Metric({ value, label, tone = 'default', size = 'default' }) {
+  const valueSize =
+    size === 'compact'
+      ? 'text-3xl sm:text-4xl'
+      : 'text-3xl sm:text-4xl xl:text-5xl'
+
   return (
-    <div className="border-t border-white/10 pt-5">
+    <div className="min-w-0 border-t border-white/10 pt-5">
       <div
         className={
           tone === 'accent'
-            ? 'text-balance font-serif text-3xl font-semibold leading-none text-riviera-blue sm:text-4xl lg:text-5xl'
-            : 'text-balance font-serif text-3xl font-semibold leading-none text-neutral-50 sm:text-4xl lg:text-5xl'
+            ? `whitespace-nowrap font-serif ${valueSize} font-semibold leading-none text-riviera-blue`
+            : `whitespace-nowrap font-serif ${valueSize} font-semibold leading-none text-neutral-50`
         }
       >
         {value}

@@ -1,11 +1,12 @@
-# Growth Hub — Landing Page (React + Vite + Tailwind)
+# Riviera Movies Landing Page
 
-Landing page institucional **simples, elegante e premium** para a marca **Growth Hub**, comunicando a Growth Hub como empresa por trás do projeto **Riviera**.
+Landing page institucional em React para apresentar a operacao Riviera Movies,
+incluindo a experiencia principal de cinema e o programa Creator Partner.
 
 ## Stack
 
-- **React** + **Vite**
-- **TailwindCSS v4** (via `@tailwindcss/vite`)
+- React + Vite
+- Tailwind CSS v4 via `@tailwindcss/vite`
 
 ## Rodar localmente
 
@@ -14,44 +15,34 @@ npm install
 npm run dev
 ```
 
-Abra o endereço mostrado no terminal (geralmente `http://localhost:5173`).
+Abra o endereco mostrado no terminal, normalmente `http://localhost:5173`.
 
-## Build (produção)
+## Build de producao
 
 ```bash
 npm run build
 npm run preview
 ```
 
-O build sai em `dist/` (pronto para deploy estático).
+O build estatico e gerado em `dist/`.
 
-## Estrutura da página (seções)
+## Estrutura da pagina
 
-A página é **single-page** e está organizada em componentes:
+A aplicacao e single-page e organizada em componentes:
 
 - `src/components/Navbar.jsx`
 - `src/components/HeroSection.jsx`
 - `src/components/AboutSection.jsx`
 - `src/components/ServicesSection.jsx`
 - `src/components/RivieraSection.jsx`
+- `src/components/CreatorPartnerSection.jsx`
 - `src/components/Footer.jsx`
 
-O “assembler” está em `src/App.jsx`.
+Os componentes compartilhados de interface ficam em `src/components/ui.jsx`.
 
-## Estilo (premium dark)
+## Direcao visual
 
-- Base e utilitários: `src/index.css`
-  - tema escuro, `scroll-behavior: smooth`
-  - utilitários do projeto (ex.: `gh-container`, `gh-section`, `gh-surface`)
-- Ícone da aba (favicon): `public/favicon.svg` (letra **G**)
-
-## Conteúdo
-
-Os textos principais foram inseridos **exatamente** como fornecidos, e os CTAs fazem scroll/links conforme a navegação.
-
-## Deploy rápido
-
-Qualquer plataforma de deploy estático funciona (Vercel/Netlify/GitHub Pages), usando:
-
-- **Build command**: `npm run build`
-- **Output directory**: `dist`
+A interface usa uma linguagem editorial escura, com tipografia serifada,
+cards discretos, linhas finas e azul Riviera como cor de acento. A estrutura
+prioriza legibilidade, responsividade e apresentacao clara do programa Creator
+Partner.
