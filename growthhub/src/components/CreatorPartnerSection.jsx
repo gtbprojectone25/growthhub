@@ -1,4 +1,56 @@
+import { useEffect, useState } from 'react'
 import { FeatureCard, Metric, PrimaryLink, SecondaryLink, SectionHeader } from './ui.jsx'
+
+const launchDate = new Date('2026-07-16T00:00:00-04:00')
+const oneSecond = 1000
+const oneMinute = 60 * oneSecond
+const oneHour = 60 * oneMinute
+const oneDay = 24 * oneHour
+
+function getCountdown(now = Date.now()) {
+  const currentTime = Number.isFinite(now) ? now : Date.now()
+  const remaining = Math.max(0, launchDate.getTime() - currentTime)
+
+  return {
+    days: Math.floor(remaining / oneDay),
+    hours: Math.floor((remaining % oneDay) / oneHour),
+    minutes: Math.floor((remaining % oneHour) / oneMinute),
+    seconds: Math.floor((remaining % oneMinute) / oneSecond),
+  }
+}
+
+function padTime(value) {
+  return String(Number.isFinite(value) ? value : 0).padStart(2, '0')
+}
+
+function LaunchCountdownMetric() {
+  const [now, setNow] = useState(() => Date.now())
+  const countdown = getCountdown(now)
+
+  useEffect(() => {
+    const updateCountdown = () => setNow(Date.now())
+    const intervalId = window.setInterval(updateCountdown, 1000)
+
+    updateCountdown()
+    return () => window.clearInterval(intervalId)
+  }, [])
+
+  return (
+    <div className="border-t border-white/10 pt-5">
+      <div className="flex flex-wrap items-end gap-x-3 gap-y-1">
+        <span className="text-balance font-serif text-3xl font-semibold leading-none text-neutral-50 sm:text-4xl lg:text-5xl">
+          {countdown.days}
+        </span>
+        <span className="pb-1 font-mono text-sm font-semibold uppercase tracking-[0.12em] text-riviera-blue sm:text-base">
+          {padTime(countdown.hours)}:{padTime(countdown.minutes)}:{padTime(countdown.seconds)}
+        </span>
+      </div>
+      <div className="mt-3 text-wrap text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+        Days to July 16 ET
+      </div>
+    </div>
+  )
+}
 
 const selectionReasons = [
   {
@@ -58,8 +110,8 @@ export default function CreatorPartnerSection() {
   return (
     <section id="creator-partner" className="gh-section">
       <div className="gh-container">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-14">
-          <div className="lg:col-span-5">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-4">
             <div className="sticky top-24">
               <SectionHeader
                 eyebrow="Creator Partner Program"
@@ -78,10 +130,10 @@ export default function CreatorPartnerSection() {
             </div>
           </div>
 
-          <div className="space-y-10 lg:col-span-7">
+          <div className="space-y-8 lg:col-span-8">
             <div className="gh-card p-6 sm:p-8">
               <div className="gh-kicker">The moment</div>
-              <h3 className="gh-display mt-4 text-3xl sm:text-4xl">
+              <h3 className="gh-display mt-4 max-w-2xl text-balance text-3xl sm:text-4xl">
                 The biggest film of the summer. The hardest ticket to get.
               </h3>
               <div className="mt-8 grid gap-5 sm:grid-cols-2">
@@ -110,12 +162,12 @@ export default function CreatorPartnerSection() {
               <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
                 <div>
                   <div className="gh-kicker">The opportunity</div>
-                  <h3 className="gh-display mt-4 text-4xl sm:text-5xl">
+                  <h3 className="gh-display mt-4 max-w-xl text-balance text-4xl sm:text-5xl">
                     An $855,000 stage. Built for the few who get in early.
                   </h3>
                 </div>
                 <div className="border-l-0 border-[rgba(91,120,255,0.5)] lg:border-l lg:pl-8">
-                  <p className="font-serif text-2xl italic leading-relaxed text-neutral-100">
+                  <p className="text-pretty font-serif text-2xl italic leading-relaxed text-neutral-100">
                     You bring the audience. You take your share of every sale your
                     code drives.
                   </p>
@@ -127,13 +179,13 @@ export default function CreatorPartnerSection() {
               <div className="mt-8 grid gap-5 sm:grid-cols-3">
                 <Metric value="3,000" label="Seats" />
                 <Metric value="$855K" label="Campaign stage" tone="accent" />
-                <Metric value="33" label="Days" />
+                <LaunchCountdownMetric key="launch-countdown-live-v2" />
               </div>
             </div>
 
             <div>
               <div className="gh-kicker">How the partnership works</div>
-              <div className="mt-5 grid gap-4 md:grid-cols-3">
+              <div className="mt-5 grid gap-4">
                 {partnershipSteps.map((item, index) => (
                   <FeatureCard
                     key={item.title}
