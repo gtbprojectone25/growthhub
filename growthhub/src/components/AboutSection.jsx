@@ -12,10 +12,10 @@ export default function AboutSection() {
           <div className="lg:col-span-8">
             <div className="gh-card p-7 sm:p-10">
               <p className="text-pretty text-base leading-relaxed text-neutral-300 sm:text-lg">
-                Growth Hub is an entertainment and business experiences company based in
-                Brazil. We operate at the intersection of culture, live events, and
-                commercial strategy - creating premium experiences for audiences who
-                expect more than ordinary.
+                Growth Hub is an entertainment and business experiences company. We
+                operate at the intersection of culture, live events, and commercial
+                strategy - creating premium experiences for audiences who expect more
+                than ordinary.
               </p>
               <div className="my-8 h-px w-full gh-hairline opacity-70" />
               <p className="text-pretty text-base leading-relaxed text-neutral-300 sm:text-lg">
