@@ -20,23 +20,23 @@ export default function HeroSection() {
         <div className="gh-section pb-16 sm:pb-20">
           <div className="mx-auto max-w-4xl text-center">
             <div className="gh-fade-up">
-              <Pill>Growth Hub</Pill>
+              <Pill>Riviera Movies</Pill>
             </div>
 
             <h1 className="gh-display gh-fade-up mt-8 text-balance text-5xl sm:text-6xl lg:text-7xl">
               <span className="block text-sm font-semibold tracking-[0.34em] text-neutral-200/80 sm:text-base">
-                GROWTH HUB
+                RIVIERA MOVIES
               </span>
               <span className="mt-4 block">
-                We don&apos;t just produce events.
+                We don&apos;t just sell tickets.
                 <br />
-                We engineer cultural momentum.
+                We build curated cinema moments.
               </span>
             </h1>
 
             <p className="gh-fade-up mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-neutral-300 sm:text-lg">
-              From exclusive cinema screenings to corporate activations, we build
-              premium experiences that create demand, loyalty, and conversation.
+              From rare-format screenings to creator-led cultural campaigns, Riviera
+              builds premium film experiences around moments audiences already want.
             </p>
 
             <div className="gh-fade-up mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
@@ -51,13 +51,13 @@ export default function HeroSection() {
                 <div className="space-y-2">
                   <div className="gh-kicker">Positioning</div>
                   <div className="text-sm leading-relaxed text-neutral-300">
-                    Premium entertainment and business experiences.
+                    Curated cinema experiences with premium inventory.
                   </div>
                 </div>
                 <div className="space-y-2">
                   <div className="gh-kicker">Focus</div>
                   <div className="text-sm leading-relaxed text-neutral-300">
-                    Culture, live events, and commercial strategy.
+                    Film culture, creator partnerships, and collector demand.
                   </div>
                 </div>
                 <div className="space-y-2">

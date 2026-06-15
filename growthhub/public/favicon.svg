@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="gh-gold" x1="12" y1="10" x2="52" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E7D4A2" stop-opacity="0.95" />
-      <stop offset="0.52" stop-color="#C8A45D" stop-opacity="0.92" />
-      <stop offset="1" stop-color="#8FA3C9" stop-opacity="0.9" />
+    <linearGradient id="riviera-blue" x1="12" y1="8" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7F95FF" />
+      <stop offset="0.5" stop-color="#5B78FF" />
+      <stop offset="1" stop-color="#DDE4FF" />
     </linearGradient>
-    <radialGradient id="gh-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(20 16) rotate(55) scale(52 46)">
-      <stop stop-color="#C8A45D" stop-opacity="0.22" />
-      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0" />
+    <radialGradient id="riviera-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18 14) rotate(48) scale(54 46)">
+      <stop stop-color="#5B78FF" stop-opacity="0.28" />
+      <stop offset="1" stop-color="#050608" stop-opacity="0" />
     </radialGradient>
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
       <feGaussianBlur in="SourceGraphic" stdDeviation="0.35" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
@@ -18,20 +18,32 @@
     </filter>
   </defs>
 
-  <rect x="4" y="4" width="56" height="56" rx="16" fill="#0B0B0F" />
-  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#gh-glow)" />
-  <rect x="4" y="4" width="56" height="56" rx="16" stroke="rgba(255,255,255,0.10)" />
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#050608" />
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#riviera-glow)" />
+  <rect x="4.5" y="4.5" width="55" height="55" rx="13.5" stroke="#FFFFFF" stroke-opacity="0.12" />
 
-  <g filter="url(#soft)">
+  <path d="M13 13H18M46 51H51" stroke="#5B78FF" stroke-width="1.6" stroke-linecap="round" />
+  <path d="M13 51H18M46 13H51" stroke="#5B78FF" stroke-width="1.6" stroke-linecap="round" />
+
+  <g opacity="0.38">
+    <rect x="10" y="21" width="3" height="4" rx="1" fill="#5B78FF" />
+    <rect x="10" y="30" width="3" height="4" rx="1" fill="#5B78FF" />
+    <rect x="10" y="39" width="3" height="4" rx="1" fill="#5B78FF" />
+    <rect x="51" y="21" width="3" height="4" rx="1" fill="#5B78FF" />
+    <rect x="51" y="30" width="3" height="4" rx="1" fill="#5B78FF" />
+    <rect x="51" y="39" width="3" height="4" rx="1" fill="#5B78FF" />
+  </g>
+
+  <g filter="url(#soft-glow)">
     <text
       x="32"
-      y="41.5"
+      y="43"
       text-anchor="middle"
-      font-size="34"
+      font-size="36"
       font-weight="800"
-      letter-spacing="-1.5"
-      font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
-      fill="url(#gh-gold)"
-    >G</text>
+      letter-spacing="-1"
+      font-family="Georgia, 'Times New Roman', serif"
+      fill="url(#riviera-blue)"
+    >R</text>
   </g>
 </svg>

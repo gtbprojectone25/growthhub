@@ -37,9 +37,9 @@ export default function Footer() {
 
           <div className="flex flex-col gap-3 text-sm text-neutral-500 sm:flex-row sm:items-center sm:justify-between">
             <div className="font-semibold tracking-[0.2em] text-neutral-400">
-              GROWTH HUB
+              RIVIERA MOVIES
             </div>
-            <div>Copyright 2026 Growth Hub</div>
+            <div>Copyright 2026 Riviera Movies</div>
           </div>
         </div>
       </div>
