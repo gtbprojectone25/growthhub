@@ -29,7 +29,7 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {services.map((service, index) => (
             <FeatureCard
               key={service.title}

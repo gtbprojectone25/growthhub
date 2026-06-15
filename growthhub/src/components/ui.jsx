@@ -4,7 +4,9 @@ export function SectionHeader({ eyebrow, title, description, align = 'left' }) {
   return (
     <div className={`max-w-3xl ${alignment}`}>
       <div className="gh-kicker">{eyebrow}</div>
-      <h2 className="gh-display mt-4 text-3xl sm:text-4xl lg:text-5xl">{title}</h2>
+      <h2 className="gh-display mt-4 text-balance text-3xl sm:text-4xl lg:text-5xl">
+        {title}
+      </h2>
       {description ? (
         <p className="mt-5 text-pretty text-base leading-relaxed text-neutral-300 sm:text-lg">
           {description}
@@ -17,13 +19,13 @@ export function SectionHeader({ eyebrow, title, description, align = 'left' }) {
 export function FeatureCard({ index, title, description }) {
   return (
     <article className="gh-card group p-6 sm:p-7">
-      <div className="flex items-start gap-5">
+      <div className="grid gap-4 sm:grid-cols-[3.25rem_minmax(0,1fr)] sm:gap-5">
         {index ? <span className="gh-index">{index}</span> : null}
-        <div>
-          <h3 className="font-serif text-xl font-semibold leading-tight text-neutral-50">
+        <div className="min-w-0">
+          <h3 className="text-balance font-serif text-xl font-semibold leading-tight text-neutral-50">
             {title}
           </h3>
-          <p className="mt-3 text-sm leading-relaxed text-neutral-400 sm:text-base">
+          <p className="mt-3 max-w-prose text-pretty text-sm leading-relaxed text-neutral-400 sm:text-base">
             {description}
           </p>
         </div>
@@ -38,13 +40,13 @@ export function Metric({ value, label, tone = 'default' }) {
       <div
         className={
           tone === 'accent'
-            ? 'font-serif text-4xl font-semibold leading-none text-riviera-blue sm:text-5xl'
-            : 'font-serif text-4xl font-semibold leading-none text-neutral-50 sm:text-5xl'
+            ? 'text-balance font-serif text-3xl font-semibold leading-none text-riviera-blue sm:text-4xl lg:text-5xl'
+            : 'text-balance font-serif text-3xl font-semibold leading-none text-neutral-50 sm:text-4xl lg:text-5xl'
         }
       >
         {value}
       </div>
-      <div className="mt-3 text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
+      <div className="mt-3 text-wrap text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
         {label}
       </div>
     </div>
