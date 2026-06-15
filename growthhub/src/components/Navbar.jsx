@@ -4,6 +4,7 @@ const navItems = [
   { label: 'About', href: '#about' },
   { label: 'What we do', href: '#what-we-do' },
   { label: 'Riviera', href: '#riviera' },
+  { label: 'Creator Partner', href: '#creator-partner' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -32,26 +33,26 @@ export default function Navbar() {
         className={cx(
           'backdrop-blur supports-backdrop-filter:bg-neutral-950/60',
           'transition-colors duration-300',
-          scrolled ? 'bg-neutral-950/70' : 'bg-transparent',
+          scrolled ? 'bg-[#050608]/82' : 'bg-transparent',
         )}
       >
         <div className="gh-container">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-16 items-center justify-between gap-4">
             <a
               href="#top"
-              className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-[0.22em] text-neutral-200/90 ring-1 ring-white/10 hover:ring-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-200/30"
+              className="inline-flex shrink-0 items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-[0.22em] text-neutral-200/90 ring-1 ring-white/10 hover:ring-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(91,120,255,0.4)]"
               aria-label="Voltar ao topo"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-200/80 shadow-[0_0_0_6px_rgba(200,164,93,0.12)]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-riviera-blue shadow-[0_0_0_6px_rgba(91,120,255,0.14)]" />
               Growth Hub
             </a>
 
-            <nav className="hidden items-center gap-1 sm:flex" aria-label="Navegação">
+            <nav className="hidden items-center gap-1 md:flex" aria-label="Navegacao">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="rounded-full px-3 py-2 text-sm text-neutral-200/80 transition hover:text-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-200/30"
+                  className="rounded-full px-3 py-2 text-sm text-neutral-200/80 transition hover:bg-white/5 hover:text-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(91,120,255,0.4)]"
                 >
                   {item.label}
                 </a>
@@ -60,7 +61,7 @@ export default function Navbar() {
 
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-white/5 px-4 py-2 text-sm font-medium text-neutral-50 ring-1 ring-white/10 transition hover:bg-white/8 hover:ring-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-200/30"
+              className="inline-flex shrink-0 items-center justify-center rounded-full bg-white/5 px-4 py-2 text-sm font-medium text-neutral-50 ring-1 ring-white/10 transition hover:bg-white/8 hover:ring-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(91,120,255,0.4)]"
             >
               Get in touch
             </a>
@@ -71,4 +72,3 @@ export default function Navbar() {
     </header>
   )
 }
-
