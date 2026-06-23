@@ -131,16 +131,21 @@ const supportItems = [
 
 const timelineItems = [
   {
-    title: 'Now',
-    description: 'Peak decision window. Demand is building and inventory is open.',
+    when: 'Right now',
+    title: 'Peak buying',
+    description:
+      'The highest buying activity of the whole campaign. Audiences deciding and acting.',
   },
   {
-    title: 'Active',
-    description: 'The campaign runs before release. Your code works hardest right now.',
+    when: 'This group',
+    title: 'Final intake',
+    description:
+      'The last partners we bring in before the campaign closes to new creators.',
   },
   {
-    title: 'Close',
-    description: 'July 16 is the screening date. Inventory closes and the window shuts.',
+    when: 'July 16',
+    title: 'Window shuts',
+    description: 'The screening. Inventory closes. No next round.',
   },
 ]
 
@@ -292,21 +297,25 @@ export default function CreatorPartnerSection() {
                 <div className="min-w-0">
                   <div className="gh-kicker">The opportunity</div>
                   <h3 className="gh-display mt-4 max-w-xl text-balance text-3xl sm:text-4xl xl:text-5xl">
-                    An $855,000 stage. Built for the few who get in early.
+                    Our first partners made $45K to $60K each.
                   </h3>
                 </div>
-                <div className="min-w-0 border-t border-[rgba(91,120,255,0.5)] pt-6 xl:border-l xl:border-t-0 xl:pl-8 xl:pt-0">
+                <div className="min-w-0 space-y-5 border-t border-[rgba(91,120,255,0.5)] pt-6 xl:border-l xl:border-t-0 xl:pl-8 xl:pt-0">
+                  <p className="max-w-2xl text-pretty font-serif text-xl italic leading-relaxed text-neutral-100 sm:text-2xl">
+                    The most anticipated film of the year, sold as a curated
+                    experience nobody else on the internet is offering.
+                  </p>
                   <p className="max-w-2xl text-pretty font-serif text-xl italic leading-relaxed text-neutral-100 sm:text-2xl">
                     You bring the audience. You take your share of every sale your
-                    code drives.
+                    code drives, with no cap.
                   </p>
                   <p className="mt-5 text-sm font-semibold uppercase tracking-[0.18em] text-riviera-blue">
-                    The window is now.
+                    The window is now. The ones who move first own it.
                   </p>
                 </div>
               </div>
               <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2">
-                <Metric value="$32K-$50K" label="Partner earning potential" tone="accent" />
+                <Metric value="$45K-$60K" label="First partners earned, each" tone="accent" />
                 <Metric value="3,000" label="Seats" />
                 <Metric value="$855K" label="Campaign stage" />
                 <LaunchCountdownMetric key="launch-countdown-live-v2" />
@@ -321,22 +330,36 @@ export default function CreatorPartnerSection() {
               <div className="gh-kicker">Why now</div>
               <div className="gh-card mt-5 p-6 sm:p-8">
                 <h3 className="gh-display max-w-2xl text-balance text-3xl sm:text-4xl">
-                  The window does not reopen.
+                  The best window. The last window.
                 </h3>
                 <p className="mt-5 max-w-3xl text-pretty text-base leading-relaxed text-neutral-300">
-                  The audience makes its decision in the weeks before release.
-                  After July 16, the moment is gone, the screening happens once,
-                  inventory is finite, and the conversation moves on.
+                  This is the last window. The film opens July 16. We are in the
+                  highest-converting stretch of the entire campaign, the weeks
+                  where cinema buyers are most active and most ready to commit.
+                  After this, the window closes and it does not reopen.
+                </p>
+                <p className="mt-6 max-w-3xl text-pretty font-serif text-xl font-semibold leading-relaxed text-neutral-100">
+                  This is the final group of partners. The ones who move now catch
+                  the peak. The ones who wait, miss it entirely.
                 </p>
               </div>
               <div className="mt-5 grid gap-4">
-                {timelineItems.map((item, index) => (
-                  <FeatureCard
-                    key={item.title}
-                    index={`0${index + 1}`}
-                    title={item.title}
-                    description={item.description}
-                  />
+                {timelineItems.map((item) => (
+                  <article key={item.title} className="gh-card p-6 sm:p-7">
+                    <div className="grid gap-4 sm:grid-cols-[10rem_minmax(0,1fr)] sm:gap-6">
+                      <div>
+                        <div className="text-xs font-semibold uppercase tracking-[0.22em] text-riviera-blue">
+                          {item.when}
+                        </div>
+                        <div className="mt-1 font-serif text-xl font-semibold leading-tight text-neutral-50">
+                          {item.title}
+                        </div>
+                      </div>
+                      <p className="min-w-0 text-pretty text-sm leading-relaxed text-neutral-400 sm:text-base">
+                        {item.description}
+                      </p>
+                    </div>
+                  </article>
                 ))}
               </div>
             </div>
@@ -408,9 +431,10 @@ export default function CreatorPartnerSection() {
             </div>
 
             <div className="border-t border-white/10 pt-8 text-sm leading-relaxed text-neutral-500">
-              Figures reflect total campaign inventory value, not individual
-              partner earnings. Compensation structure is confirmed on the partner
-              call. Individual results depend on audience, reach, and effort.
+              Figures reflect earnings generated by our first partners on this
+              campaign. Compensation structure is confirmed on the partner call.
+              Individual results vary with your audience, reach, and how
+              consistently you post.
             </div>
           </div>
         </div>

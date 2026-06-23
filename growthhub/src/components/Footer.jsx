@@ -1,11 +1,13 @@
-function SocialButton({ children }) {
+function SocialButton({ href, children }) {
   return (
-    <button
-      type="button"
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
       className="inline-flex items-center justify-center rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-neutral-50 ring-1 ring-white/12 transition hover:bg-white/8 hover:ring-white/18 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(91,120,255,0.4)]"
     >
       {children}
-    </button>
+    </a>
   )
 }
 
@@ -28,7 +30,9 @@ export default function Footer() {
 
             <div className="lg:col-span-5 lg:flex lg:items-end lg:justify-end">
               <div className="flex flex-wrap gap-3">
-                <SocialButton>Instagram</SocialButton>
+                <SocialButton href="https://www.instagram.com/riviera.movies/">
+                  Instagram
+                </SocialButton>
               </div>
             </div>
           </div>

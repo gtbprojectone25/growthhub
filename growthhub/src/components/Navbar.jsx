@@ -5,6 +5,7 @@ const navItems = [
   { label: 'What we do', href: '#what-we-do' },
   { label: 'Riviera', href: '#riviera' },
   { label: 'Creator Partner', href: '#creator-partner' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ]
 
