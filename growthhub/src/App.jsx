@@ -4,6 +4,7 @@ import AboutSection from './components/AboutSection.jsx'
 import ServicesSection from './components/ServicesSection.jsx'
 import RivieraSection from './components/RivieraSection.jsx'
 import CreatorPartnerSection from './components/CreatorPartnerSection.jsx'
+import FaqSection from './components/FaqSection.jsx'
 import Footer from './components/Footer.jsx'
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <ServicesSection />
         <RivieraSection />
         <CreatorPartnerSection />
+        <FaqSection />
       </main>
       <Footer />
     </div>
