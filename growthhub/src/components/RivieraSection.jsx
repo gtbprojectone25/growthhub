@@ -23,7 +23,7 @@ export default function RivieraSection() {
 
           <div className="mt-12 grid gap-x-8 gap-y-6 sm:grid-cols-2 xl:grid-cols-3">
             <Metric value="IMAX 70mm" label="Format" size="compact" />
-            <Metric value="25" label="Native venues worldwide" tone="accent" />
+            <Metric value="28" label="Native venues worldwide" tone="accent" />
             <Metric value="2026" label="Flagship year" />
           </div>
         </div>
