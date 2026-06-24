@@ -38,7 +38,7 @@ function LaunchCountdownMetric() {
   return (
     <div className="border-t border-white/10 pt-5">
       <div className="flex flex-wrap items-end gap-x-3 gap-y-1">
-        <span className="text-balance font-serif text-3xl font-semibold leading-none text-neutral-50 sm:text-4xl lg:text-5xl">
+        <span className="text-balance font-serif text-3xl font-semibold leading-none text-neutral-50 sm:text-4xl">
           {countdown.days}
         </span>
         <span className="pb-1 font-mono text-sm font-semibold uppercase tracking-[0.12em] text-riviera-blue sm:text-base">
@@ -74,7 +74,7 @@ const promotionItems = [
   {
     title: 'The Seat',
     description:
-      'A confirmed seat at one of 25 venues worldwide projecting the film in native IMAX 70mm.',
+      'A confirmed seat at one of 28 venues worldwide projecting the film in native IMAX 70mm.',
   },
   {
     title: 'The Artifacts',
@@ -163,7 +163,7 @@ const verificationItems = [
   {
     title: 'Independent & transparent',
     description:
-      'Riviera Movies is not affiliated with Universal or IMAX and states the partnership clearly.',
+      'Riviera Movies is not affiliated with the studio or IMAX and states the partnership clearly.',
   },
 ]
 
@@ -235,7 +235,7 @@ export default function CreatorPartnerSection() {
               </p>
               <div className="mt-8 grid gap-5 sm:grid-cols-2">
                 <Metric value="$250M" label="Production budget" />
-                <Metric value="25" label="Native IMAX 70mm venues" tone="accent" />
+                <Metric value="28" label="Native IMAX 70mm venues" tone="accent" />
                 <Metric value="Hours" label="First seats sold out" />
                 <Metric value="Jul 16" label="Single release moment" tone="accent" />
               </div>
@@ -293,14 +293,14 @@ export default function CreatorPartnerSection() {
             </div>
 
             <div className="gh-card overflow-hidden p-6 sm:p-8">
-              <div className="grid gap-8 xl:grid-cols-[0.9fr_1.1fr] xl:items-center">
+              <div className="grid gap-10 xl:grid-cols-[0.9fr_1.1fr] xl:items-center xl:gap-14">
                 <div className="min-w-0">
                   <div className="gh-kicker">The opportunity</div>
                   <h3 className="gh-display mt-4 max-w-xl text-balance text-3xl sm:text-4xl xl:text-5xl">
                     Our first partners made $45K to $60K each.
                   </h3>
                 </div>
-                <div className="min-w-0 space-y-5 border-t border-[rgba(91,120,255,0.5)] pt-6 xl:border-l xl:border-t-0 xl:pl-8 xl:pt-0">
+                <div className="min-w-0 space-y-5">
                   <p className="max-w-2xl text-pretty font-serif text-xl italic leading-relaxed text-neutral-100 sm:text-2xl">
                     The most anticipated film of the year, sold as a curated
                     experience nobody else on the internet is offering.
@@ -314,10 +314,9 @@ export default function CreatorPartnerSection() {
                   </p>
                 </div>
               </div>
-              <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2">
-                <Metric value="$45K-$60K" label="First partners earned, each" tone="accent" />
-                <Metric value="3,000" label="Seats" />
-                <Metric value="$855K" label="Campaign stage" />
+              <div className="mt-8 grid gap-x-8 gap-y-6 grid-cols-1 xl:grid-cols-3">
+                <Metric value="$45K-$60K" label="First partners earned, each" tone="accent" size="compact" />
+                <Metric value="$855K" label="Campaign stage" size="compact" />
                 <LaunchCountdownMetric key="launch-countdown-live-v2" />
               </div>
               <p className="mt-8 border-t border-white/10 pt-5 font-serif text-xl font-semibold leading-relaxed text-neutral-100">

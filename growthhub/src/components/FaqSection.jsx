@@ -59,8 +59,8 @@ const faqGroups = [
         a: 'Yes. Riviera Movies designs curated experiences around major cinema events. For The Odyssey, that is confirmed IMAX 70mm screening access plus numbered physical artifacts produced exclusively for the event. Everything is at rivieramovies.com and on Instagram @riviera.movies. We will hop on a video call any time. We would rather you verify us than take our word for it.',
       },
       {
-        q: 'Are you affiliated with Universal, IMAX, or the studio?',
-        a: 'No, and we are upfront about it. We are independent and not affiliated with Universal, IMAX, or the film distributor. We acquired our screening inventory through the first public allocation and built the experience around it. We never present ourselves as an official channel.',
+        q: 'Are you affiliated with the studio, distributor, or IMAX?',
+        a: 'No, and we are upfront about it. We are independent and not affiliated with the studio, IMAX, or the film distributor. We acquired our screening inventory through the first public allocation and built the experience around it. We never present ourselves as an official channel.',
       },
       {
         q: 'Do you operate in the US?',
@@ -254,8 +254,8 @@ export default function FaqSection() {
             ))}
 
             <p className="border-t border-white/10 pt-8 text-sm italic leading-relaxed text-neutral-500">
-              Riviera Movies is independent and not affiliated with Universal
-              Pictures, IMAX, or the film distributor. Earnings figures reflect
+              Riviera Movies is independent and not affiliated with the studio,
+              IMAX, or the film distributor. Earnings figures reflect
               what our first partners generated on this campaign. Individual
               results depend on your audience, your reach, and how consistently
               you post.
