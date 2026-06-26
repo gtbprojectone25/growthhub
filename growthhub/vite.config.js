@@ -10,7 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
-        'creator-guide': resolve(import.meta.dirname, 'creator-guide.html'),
+        'creator-guide': resolve(import.meta.dirname, 'creator-guide/index.html'),
       },
     },
   },
